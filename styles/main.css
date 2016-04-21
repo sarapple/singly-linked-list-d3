@@ -1,0 +1,21 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	max-height: 100vh;
+	max-width: 100vw;
+}
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}

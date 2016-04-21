@@ -1,0 +1,47 @@
+<!-- SINGLY LINKED LIST, WITH D3 VISUAL -->
+
+<!-- using Mike Bostock’s Block http://bl.ocks.org/mbostock/4063550 for D3 example -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Linked List</title>
+	<link rel="stylesheet" type="text/css" href="./styles/main.css">
+</head>
+<body>
+	<script src="./libs/d3.v3.min.js" charset="utf-8"></script>
+	<!-- DEFINITIONS
+			- Available Classes:
+				> Node(text)
+				> LinkedList()
+					prototype functions:
+					- push(node)
+					- pop()
+					- shift(node)
+					- unshift()
+					- insert(position, node)
+			- Available Function:
+				> d3Builder(linkedList.head)
+	-->
+	<!-- open in browser for visual -->
+	<script src="./scripts/linked_list.js" type="text/javascript"></script>
+	<script src="./scripts/d3_builder.js" type="text/javascript"></script>
+
+	<!-- actual script execution -->
+	<script>
+		//build linkedlist
+		var linkedList = new LinkedList();
+		linkedList.push(new Node('start'));
+		linkedList.push(new Node('1'));
+		linkedList.push(new Node('2'));
+		linkedList.push(new Node('3'));
+		linkedList.push(new Node('4'));
+		linkedList.pop();
+		linkedList.unshift();
+		linkedList.shift(new Node('before'));
+		linkedList.insert(1, new Node('inserted'));
+
+		//build in d3
+		d3Builder(linkedList.head);
+	</script>
+</body>
+</html>
